@@ -23,8 +23,12 @@ public class ProductTest {
         Product aProduct = new Product("1", "DELL MONITOR", 180);
         // EXPECTED RESULT WAS A STRING -> "180" , THE PRICE IS AN DOUBLE -> 180
         // assertEquals("Check the price of the product", "180", aProduct.getPrice());
-        double price = 180;
-        assertEquals("Check the price of the product", price, aProduct.getPrice());
+
+        // assertEquals("Check the price of the product", 180, aProduct.getPrice());
+
+        // previous assertEquals methods were deprecated and caused errors?
+         // below line runs locally and 3/3 test cases pass...
+        assertEquals(180, aProduct.getPrice(), 0);
     }
 
 }
